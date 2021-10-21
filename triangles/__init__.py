@@ -16,14 +16,14 @@ def compiles():
 @check50.check(compiles)
 def trinagle1():
     """3, 4, 5"""
-    check50.run("./hello").stdin("3").stdin("4").stdin("5").stdout("Valid").exit()
+    check50.run("./triangles").stdin("3").stdin("4").stdin("5").stdout("Valid").exit()
 
 @check50.check(compiles)
 def trinagle2():
     """2, 3, 5"""
-    check50.run("./hello").stdin("2").stdin("3").stdin("5").stdout("Invalid").exit()
+    check50.run("./triangles").stdin("2").stdin("3").stdin("5").stdout("Invalid").exit()
     
 @check50.check(compiles)
 def trinagle3():
     """-3, 4, 5"""
-    check50.run("./hello").stdin("-3").stdin("4").stdin("5").stdout("Invalid").exit()
+    check50.run("./triangles").stdin("-3").stdin("4").stdin("5").stdout("Invalid").exit()
