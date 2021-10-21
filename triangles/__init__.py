@@ -14,11 +14,16 @@ def compiles():
     check50.c.compile("trinagles.c", lcs50=True)
 
 @check50.check(compiles)
-def emma():
-    """responds to name Emma"""
-    check50.run("./hello").stdin("Emma").stdout("Emma").exit()
+def trinagle1():
+    """3, 4, 5"""
+    check50.run("./hello").stdin("3").stdin("4").stdin("5").stdout("Valid").exit()
 
 @check50.check(compiles)
-def rodrigo():
-    """responds to name Rodrigo"""
-    check50.run("./hello").stdin("Rodrigo").stdout("Rodrigo").exit()
+def trinagle2():
+    """2, 3, 5"""
+    check50.run("./hello").stdin("2").stdin("3").stdin("5").stdout("Invalid").exit()
+    
+@check50.check(compiles)
+def trinagle3():
+    """-3, 4, 5"""
+    check50.run("./hello").stdin("-3").stdin("4").stdin("5").stdout("Invalid").exit()
