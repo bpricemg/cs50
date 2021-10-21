@@ -11,7 +11,7 @@ def exists():
 def compiles():
     """triangles.c compiles"""
     # Check if student code compiles
-    check50.c.compile("trinagles.c", lcs50=True)
+    check50.c.compile("triangles.c", lcs50=True)
 
 @check50.check(compiles)
 def trinagle1():
