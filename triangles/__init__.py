@@ -20,7 +20,7 @@ def trinagle1():
 
 @check50.check(compiles)
 def trinagle2():
-    """ Rejects an invalid triangle 2, 3, 5"""
+    """Rejects an invalid triangle 2, 3, 5"""
     check50.run("./triangles").stdin("2").stdin("3").stdin("5").stdout("Invalid").exit()
     
 @check50.check(compiles)
