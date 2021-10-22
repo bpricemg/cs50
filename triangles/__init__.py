@@ -29,6 +29,6 @@ def trinagle3():
     check50.run("./triangles").stdin("-3").stdin("4").stdin("5").stdout("Invalid").exit()
 
 @check50.check(compiles)
-def trinagle5():
+def trinagle4():
     """Rejects 0 0, 0, 0"""
     check50.run("./triangles").stdin("0").stdin("0").stdin("0").stdout("Invalid").exit()
