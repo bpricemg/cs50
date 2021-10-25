@@ -13,20 +13,20 @@ def compiles():
 
 @check50.check(compiles)
 def uppercase():
-    """Outputs HLJ for Hailey Lynn James"""
-    check50.run("./initials").stdin("Hailey Lynn James", prompt=False).stdout("HLJ").exit(0)
+    """Outputs BAP for Brandon Alexander Price"""
+    check50.run("./initials").stdin("Brandon Alexander Price", prompt=False).stdout("BAP").exit(0)
 
 @check50.check(compiles)
 def lowercase():
-    """Outputs HLJ for hailey lynn james"""
-    check50.run("./initials").stdin("hailey lynn james", prompt=False).stdout("HLJ").exit(0)
+    """Outputs BAP for brandon alexander price"""
+    check50.run("./initials").stdin("brandon alexander price", prompt=False).stdout("BAP").exit(0)
 
 @check50.check(compiles)
 def mixed_case():
-    """Outputs HJ for hailey James"""
-    check50.run("./initials").stdin("hailey James", prompt=False).stdout("HJ").exit(0)
+    """Outputs BP for brandon Price"""
+    check50.run("./initials").stdin("brandon Price", prompt=False).stdout("BP").exit(0)
 
 @check50.check(compiles)
 def all_uppercase():
-    """Outputs B for BRIAN"""
-    check50.run("./initials").stdin("BRIAN", prompt=False).stdout("B").exit(0)
+    """Outputs B for BRANDON"""
+    check50.run("./initials").stdin("BRANDON", prompt=False).stdout("B").exit(0)
