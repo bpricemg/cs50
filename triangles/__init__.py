@@ -4,31 +4,21 @@ import re
 
 @check50.check()
 def exists():
-    """triangles.c exists"""
-    check50.exists("triangles.c")
+    """snackbar.c exists"""
+    check50.exists("snackbar.c")
 
 @check50.check(exists)
 def compiles():
-    """triangles.c compiles"""
+    """snackbar.c compiles"""
     # Check if student code compiles
-    check50.c.compile("triangles.c", lcs50=True)
+    check50.c.compile("snackbar.c", lcs50=True)
 
 @check50.check(compiles)
 def trinagle1():
-    """Accepts a valid triangle 3, 4, 5"""
-    check50.run("./triangles").stdin("3").stdin("4").stdin("5").stdout("Valid").exit()
+    """burger, fries, soda"""
+    check50.run("./snackbar").stdin("burger").stdin("fries").stdin("soda").stdin("\n").stdout("Your total cost is: $16.50").exit()
 
 @check50.check(compiles)
 def trinagle2():
-    """Rejects an invalid triangle 2, 3, 5"""
-    check50.run("./triangles").stdin("2").stdin("3").stdin("5").stdout("Invalid").exit()
-    
-@check50.check(compiles)
-def trinagle3():
-    """Rejects negative numbers -3, 4, 5"""
-    check50.run("./triangles").stdin("-3").stdin("4").stdin("5").stdout("Invalid").exit()
-
-@check50.check(compiles)
-def trinagle4():
-    """Rejects 0 0, 0, 0"""
-    check50.run("./triangles").stdin("0").stdin("0").stdin("0").stdout("Invalid").exit()
+    """cold brew, hot dog"""
+    check50.run("./snackbar").stdin("cold brew").stdin("hot dog").stdin("\n").stdout("Your total cost is: $8.00").exit()
