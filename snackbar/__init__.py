@@ -16,7 +16,7 @@ def compiles():
 @check50.check(compiles)
 def trinagle1():
     """burger, fries, soda"""
-    check50.run("./snackbar").stdout("Welcome to Beach Burger Shack!\nChoose from the following menu to order. Press enter when done.\nBurger: $9.50\nVegan Burger: $11.00\nHot Dog: $5.00\nCheese Dog: $7.00\nFries: $5.00\nCheese Fries: $6.00\nCold Pressed Juice: $7.00\nCold Brew: $3.00\nWater: $2.00\nSoda: $2.00\n").stdin("burger").stdin("fries").stdin("soda").stdin("\n").stdout("\nYour total cost is: $16.50").exit()
+    check50.run("./snackbar").stdout("\nWelcome to Beach Burger Shack!\nChoose from the following menu to order. Press enter when done.\n\nBurger: $9.50\nVegan Burger: $11.00\nHot Dog: $5.00\nCheese Dog: $7.00\nFries: $5.00\nCheese Fries: $6.00\nCold Pressed Juice: $7.00\nCold Brew: $3.00\nWater: $2.00\nSoda: $2.00\n\nEnter a food item: ").stdin("burger").stdin("fries").stdin("soda").stdin("\n").stdout("\nYour total cost is: $16.50").exit()
 
 @check50.check(compiles)
 def trinagle2():
