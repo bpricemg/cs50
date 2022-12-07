@@ -14,11 +14,11 @@ def compiles():
     check50.c.compile("snackbar.c", lcs50=True)
 
 @check50.check(compiles)
-def trinagle1():
+def test1():
     """burger, fries, soda"""
-    check50.run("./snackbar").stdout("\nWelcome to Beach Burger Shack!\nChoose from the following menu to order. Press enter when done.\n\nBurger: $9.50\nVegan Burger: $11.00\nHot Dog: $5.00\nCheese Dog: $7.00\nFries: $5.00\nCheese Fries: $6.00\nCold Pressed Juice: $7.00\nCold Brew: $3.00\nWater: $2.00\nSoda: $2.00\n\nEnter a food item: ").stdin("burger").stdin("fries").stdin("soda").stdin("\n").stdout("\nYour total cost is: $16.50").exit()
+    check50.run("./snackbar").stdin("burger").stdin("fries").stdin("soda").stdin("\n").stdout("\nYour total cost is: $16.50")
 
 @check50.check(compiles)
-def trinagle2():
+def test2():
     """cold brew, hot dog"""
-    check50.run("./snackbar").stdin("cold brew").stdin("hot dog").stdin("\n").stdout("$8.00")
+    check50.run("./snackbar").stdin("cold brew").stdin("hot dog").stdin("\n").stdout("\nYour total cost is: $8.00")
