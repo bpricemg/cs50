@@ -21,4 +21,4 @@ def trinagle1():
 @check50.check(compiles)
 def trinagle2():
     """cold brew, hot dog"""
-    check50.run("./snackbar").stdin("cold brew").stdin("hot dog").stdin("\n").stdout("\nYour total cost is: $8.00").exit()
+    check50.run("./snackbar").stdin("cold brew").stdin("hot dog").stdin("\n").stdout("$8.00").exit()
