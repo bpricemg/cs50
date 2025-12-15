@@ -26,4 +26,4 @@ def positive2():
 @check50.check(compiles)
 def negative():
     """Digit sum -5391"""
-    check50.run("./digitsum").stdin("-5391").stdout("").exit()
+    check50.run("./digitsum").stdin("-5391").stdout("-18").exit()
