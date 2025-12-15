@@ -15,15 +15,15 @@ def compiles():
 
 @check50.check(compiles)
 def positive1():
-    """Digit sum 1234"""
+    """digit sum of 1234"""
     check50.run("./digitsum").stdin("1234").stdout("10").exit()
 
 @check50.check(compiles)
 def positive2():
-    """Digit sum 1"""
+    """digit sum of 1"""
     check50.run("./digitsum").stdin("1").stdout("1").exit()
     
 @check50.check(compiles)
 def negative():
-    """Digit sum -5391"""
+    """digit sum of -5391"""
     check50.run("./digitsum").stdin("-5391").stdout("-18").exit()
